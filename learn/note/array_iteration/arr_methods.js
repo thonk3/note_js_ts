@@ -15,11 +15,11 @@ console.log(
 // indexOf() -> int
 // return index of item
 console.log(
-    arr.indexOf('a') + '\n' +
-    arr.indexOf('two') + '\n' +
-    arr.indexOf('THREE'.toLowerCase()) + '\n'
+    arr.indexOf('a') + '\n' +                   // doesnt exist
+    arr.indexOf('two') + '\n' +                 // index 1
+    arr.indexOf('THREE'.toLowerCase()) + '\n'   // index 2
 );
 
 // join(seperator) -> string
-// convert array into string
+// convert array into string seperated by the probided seperator
 console.log(arr.join(" - "));

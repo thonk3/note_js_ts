@@ -8,15 +8,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      
         <div>
           <h3>Searching thing</h3>
           <div className="containerDiv">
-            <input type="text" onKeyUp={onKeyUp}/>
+            <input type="text" onKeyDown={onKeyUp}/>
             <div id="nameContainer"></div>
           </div>
         </div>
@@ -52,7 +47,8 @@ const onKeyUp = (e) => {
     let str = e.target.value.toLowerCase();
 
     let xSub = x.substring(0, 3).toLowerCase();
-     return x.toLowerCase().includes(str) ||
+
+    return x.toLowerCase().includes(str) ||
     checkName(xSub, str);
   });
   
