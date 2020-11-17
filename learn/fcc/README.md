@@ -1,6 +1,6 @@
 # freecodecamp js branch
 
-working through the js dsa cert
+working through the js dsa cert, suppositely following along **code.sydney** js study group
 
 - [basicjs]()
 - [es6]()
