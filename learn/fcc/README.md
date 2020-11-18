@@ -2,7 +2,7 @@
 
 working through the js dsa cert, suppositely following along **code.sydney** js study group
 
-- [basicjs]()
+- [basicjs](./basicjs/README.md)
 - [es6]()
 - [regex]()
 - [basic debug]()
