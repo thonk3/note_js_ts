@@ -62,4 +62,24 @@ any new thing i leant will be noted down
   - `===` will not convert type
 - `!=` and `!==`
 - comparisson operator
+- if/else chaining
+
+- golf code
+- switch statement
+- default switch case
+- multiple options
+- switch replacing ifs
+- javascript objects
+- js obj dot notation
+
+- js obj bracket notation
+- js obj access properties with vars
+  - the explanation for this is very convoluted
+- js obj adding new props
+- js obj removing properties
+  - using `delete` keyword
+  - `delete obj.prop`
+- test if properties exist with `hasOwnProperty()`
+
+
 
