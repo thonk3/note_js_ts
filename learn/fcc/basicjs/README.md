@@ -53,3 +53,13 @@ any new thing i leant will be noted down
 - return assigned
 - basic queue using array functions
 - basic boolean
+- if statement
+
+- `==` operator
+- `===` operator
+  - the difference between these 2 is
+  - `==` will try to convert the lhs value if the data type is missmatched
+  - `===` will not convert type
+- `!=` and `!==`
+- comparisson operator
+
