@@ -82,4 +82,12 @@ any new thing i leant will be noted down
 - test if properties exist with `hasOwnProperty()`
 
 
+---
+
+- `Math.random()`
+- `Math.random()` with a range
+- string to int
+- binary string to int
+- ternary
+- more recursion (interesting way of doing recursion)
 
