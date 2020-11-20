@@ -13,8 +13,15 @@ yep works the same way as [basicjs](../basicjs/README.md), list the content I go
   - objects (arr, functions) are still mutable when declared with `const`
   - `s[1] = 3;` is ok
 - preventing object mutation with `Object.freeze(obj)`
+<<<<<<< HEAD
   ```js
   let obj = { name: "fcc" };
   Object.freeze(obj);
   ```
 - 
+=======
+  - ```js
+  - let obj = { name: "fcc" };
+  - Object.freeze(obj);
+  - ```
+>>>>>>> d359191c279ba6076bb39bac7d354ad81380a053
