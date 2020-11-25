@@ -4,6 +4,7 @@ this bit ill just briefly note down what is done, these are simple.
 
 any new thing i leant will be noted down
 
+day 1
 - comments
 - declaring variable
 - storing variable value
@@ -11,28 +12,32 @@ any new thing i leant will be noted down
 - var definition
 - uninitialized var
 
+day 2
 - var name case sensitivity
 - sum/subtract/multiply/divide
 - increment/decrement
 
+day 3/4
 - floating point
 - multiply/divide floats
 - remainder (mod)
 - compound assignment sum/subtract/multiply/divide
-
 - declaring strings
 - escape keys
 - single/double quotes
 
+day 5
 - more escapekeys
 - string concat
 - string constructiong with vars
 - string length
 
+day 6
 - string char index
 - string mimmutability
   - `strings` are **immutable**, cannot be changed/ only reassigned
-
+  
+day 7
 - arrays
 - multi-dimension array
 - accessing arrays
@@ -40,6 +45,7 @@ any new thing i leant will be noted down
 - accessing multi-dimension array
 - using `push()`
 
+day 8
 - using `pop()`
 - using `shift()`
   - same as pop but removing first element
@@ -55,6 +61,7 @@ any new thing i leant will be noted down
 - basic boolean
 - if statement
 
+day 9
 - `==` operator
 - `===` operator
   - the difference between these 2 is
@@ -64,6 +71,7 @@ any new thing i leant will be noted down
 - comparisson operator
 - if/else chaining
 
+day 10
 - golf code
 - switch statement
 - default switch case
@@ -71,6 +79,7 @@ any new thing i leant will be noted down
 - switch replacing ifs
 - javascript objects
 - js obj dot notation
+day 11
 
 - js obj bracket notation
 - js obj access properties with vars
@@ -81,22 +90,21 @@ any new thing i leant will be noted down
   - `delete obj.prop`
 - test if properties exist with `hasOwnProperty()`
 
-<<<<<<< HEAD
-
----
-
-- `Math.random()`
-- `Math.random()` with a range
-- string to int
-- binary string to int
-- ternary
-- more recursion (interesting way of doing recursion)
-=======
+day 12
 - while loop
 - for loop
 - nesting for loops
 - do, while
 - replace loops with recursion
 - profile lookup
->>>>>>> master
+
+day 13
+- `Math.random()`
+- `Math.random()` with a range
+- string to int
+- binary string to int
+- ternary
+- more recursion (interesting way of doing recursion)
+
+> done basic js 
 
