@@ -81,6 +81,7 @@ any new thing i leant will be noted down
   - `delete obj.prop`
 - test if properties exist with `hasOwnProperty()`
 
+<<<<<<< HEAD
 
 ---
 
@@ -90,4 +91,12 @@ any new thing i leant will be noted down
 - binary string to int
 - ternary
 - more recursion (interesting way of doing recursion)
+=======
+- while loop
+- for loop
+- nesting for loops
+- do, while
+- replace loops with recursion
+- profile lookup
+>>>>>>> master
 
