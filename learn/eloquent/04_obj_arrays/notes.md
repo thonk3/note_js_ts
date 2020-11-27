@@ -60,3 +60,30 @@ clg(ob1 === object)     // true
 ob1.val = 3;
 clg(object)             // 3
 clg(ob3);               // 10
+```
+
+- `ob1` and `object` are binded to the same object, hence they are refered to the same value when it is changed.
+- even if the object is a `cost` its props can still be changed
+```js
+const score = { vis: 3, home: 0 };
+score.vis = 5;                      // this works
+score = { vis: 3, home: 5 };        // reassigning const doesnt work
+```
+
+--- 
+
+## something
+
+> im not sure if this part is still related anymore.
+> it seems like its showing what objects can achieve
+
+- so this part will try to measure correlation:
+  - a measure of dependencies between statistical variables
+  - correlation between variables expressed between `-1 -> 1`
+  - 0 means not related, 1 pefect relation
+- to compute corellation between 2 bools, use phi coefficient formula
+- input a frequency table containing the number of times different combination of variables are observed
+
+> ok so the scary looking formula is not so scary afteral.
+> it is just there to work with javascript
+
