@@ -34,13 +34,31 @@ day 16
 
 day 17
 - `destructure` with `rest`
-- `destructure` object in a function parameter
+- !! `destructure` object in a function parameter
 - string litterals template
 - shorthand object
 - functions shorthand for object
 
+> should revise and compile destructure code
+
 day 18
 
+- creating class with constructors in js
+- using getter/setters with objects
+- module script tag
+- exporting a code block
+- importing a code block
+
+> [class definition with getter/setters](./class.js)
 
 day 19
 - `import *`
+- export fallback using `export default`
+- importing `default` export
+- intro to `Promise`
+- completing `Promise` with `resolve` and `reject`
+  - so `resolve` and `reject` are methods
+- handle fullfiled `Promises` with `then`
+- handle rejected `Promises` with `catch`
+
+> ok this is done but I propbably need to look into `Promises`
