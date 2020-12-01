@@ -12,6 +12,10 @@ const deepEqual = (a ,b) => {
             let aKeys = Object.keys(a);
             let bKeys = Object.keys(b);
 
+            for (let k of aKeys) {
+
+            }
+
         } else return a === b;
     }
     return false;
@@ -19,3 +23,7 @@ const deepEqual = (a ,b) => {
 
 console.log(typeof {})
 console.log(Object.keys(obj));
+
+// yeah not completed.
+// ive spent too much time on this chapt already
+// should try to complete it though
