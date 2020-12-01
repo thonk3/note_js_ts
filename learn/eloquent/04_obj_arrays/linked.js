@@ -35,10 +35,14 @@ const listToArray = list => {
     let array = [];
     let next = list;
 
-    do {
-        array.push(next.value);
-        next = next.rest;
-    } while (next.rest !== null);
+    for(let node = list; node; node = node.rest) 
+        array.push(node.value);
+
+    // another way to iterate
+    // do {
+        // array.push(next.value);
+        // next = next.rest;
+    // } while (next.rest !== null);
 
     return array
 }
