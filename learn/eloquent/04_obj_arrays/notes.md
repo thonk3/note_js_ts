@@ -229,6 +229,50 @@ OK so when the operator is used **AS** a parameter,
 oh this is talking about the `Math` object used to do "adv" mathematical operations
 - what special is it provides a `namespace` for these methods. and as the methods contain simple english
 - this safely seperate the binding names from your own bindings
+- as js does not warn you if the name is taken
+
+some methods
+- `pow`, `squrt`
+- `cos`, `sin`, `tan`, `pi`
+- `random`, `random`, `floor`, `ceil`
+- `round`, `abs`
+
+## Destructuring
+
+so this is to break down contents of arrays, objects. while assigning them to bindings in function parameters for better readability
+
+considering the phi function
+
+```js
+// without destructuring
+function phi(table) {
+  return (table[3] * table[0] - table[2] * table[1]) /
+    Math.sqrt((table[2] + table[3]) *
+              (table[0] + table[1]) *
+              (table[1] + table[3]) *
+              (table[0] + table[2]));
+}
+
+// with destructuring
+function phi([n00, n01, n10, n11]) {
+  return (n11 * n00 - n10 * n01)  /
+    Math.sqrt(
+      (n10 + n11) * (n00 + n01) * (n01 + n11) * (n00 + n10)
+    );
+}
+// this is alot easier to read when refering to the equation
+```
+
+this is pretty much the same
+
+## JSON
+
+Javascript Object Notation
+
+you prety much know what this is but heres some related functions
+
+- `JSON.stringify` convert json to string
+- `JSON.parse` convert string to json
 
 
 
