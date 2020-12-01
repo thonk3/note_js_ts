@@ -72,7 +72,7 @@ score = { vis: 3, home: 5 };        // reassigning const doesnt work
 
 --- 
 
-## something
+## something using js
 
 > im not sure if this part is still related anymore.
 > it seems like its showing what objects can achieve
@@ -81,9 +81,95 @@ score = { vis: 3, home: 5 };        // reassigning const doesnt work
   - a measure of dependencies between statistical variables
   - correlation between variables expressed between `-1 -> 1`
   - 0 means not related, 1 pefect relation
-- to compute corellation between 2 bools, use phi coefficient formula
+- to compute correlation between 2 bools, use phi coefficient formula
 - input a frequency table containing the number of times different combination of variables are observed
 
 > ok so the scary looking formula is not so scary afteral.
 > it is just there to work with javascript
 
+### computing correlation
+
+so depending on how the data from the parameters is represented
+- either as an 4 elem array
+- or a 2d array representing the table
+
+since its a 2x2 table, this following solution view the parameter as a 4 elem array. and interpret the index as binary
+
+```js
+// phi coefficient equation on table
+function phi (tb) {
+  let top = tb[3] * tb[0] + tb[2] + tb[1];
+  let bottom = Math.sqrt(
+    (tb[2] + tb[3]) *
+    (tb[0] + tb[1]) *
+    (tb[1] + tb[3]) *
+    (tb[0] + tb[2]) *
+  );
+
+  return top / bottom;
+}
+
+// out
+console.log(phi([76, 9, 4, 1]));
+// 0.068599434
+```
+
+the `phi correlation` formula is only a part of the solution. the table needs to be created from a dataset aggregating a specific **action**
+- ok so heres the [dataset](https://eloquentjavascript.net/code/journal.js)
+- heres the function to create the table for an activity
+
+```js
+function getTable(event, journal) {
+  let table = [0, 0, 0, 0];
+  for (let i = 0; i < journal.length; i++) {
+    let entry = journal[i], index = 0;
+
+    if (entry.events.includes(event)) index+=1;
+    if (entry.squirrel) index+=2;
+
+    table[index]+=1;
+  }
+
+  return table;
+}
+```
+
+- this uses the `includes()` to check if a value exist in the array
+- so now we need a way to create a function that loops through all the actions from the dataset
+
+### array loops
+
+- this part talks about 2 ways of looping through a list
+  - normal for loop
+  - for each (for of) loops
+  ```js
+  for (let item of list) { 
+    console.log(`${item}`); 
+  }
+  ```
+
+### final task
+
+- so now we will need a way to get a list of events recorded in the journal, with out having duplicates
+
+```js
+function journalEvents(journal) {
+  let unique = [];
+  for (let entry of journal) {
+    for(let event of entry.events)
+      if(!unique.includes(event))
+        unique.push(event);
+  }
+
+  return unique;
+}
+```
+
+- this would return the list of unique events recorded in the journal
+- now we can combine our functions (`phi`, `getTable` and `journalEvents`)
+- additionally there are some correlation which are close to 0, so we could effectively remove them as its a lower probability
+
+heres the [code at this point](./is_it_final.js)
+
+
+  
