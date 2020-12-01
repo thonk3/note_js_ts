@@ -171,5 +171,74 @@ function journalEvents(journal) {
 
 heres the [code at this point](./is_it_final.js)
 
-
+- ok so whule this only show corrolation for each individual activities, what about its combinations
+- think about it
   
+
+## More arrays
+
+> recapping on array methods (rememer the nameing is related to stack)
+> - `push` add to last
+> - `pop` remove last
+
+introducing
+- `shift` remove from start
+- `unshift` add to start
+
+> the name of these 2 related to queues
+
+searching for a specific value use 
+- `indexOf` get the index of the first matching value
+- `lastIndexOf` get index of the last matching value
+
+to cut and add
+- use `slice` like strings
+- use `concat` to add 2 arrays
+
+```js
+// example function to remove a specific element by index
+const remobe = (arr, i) => {
+  return arr.slice(0, i).concat(arr.slice(index + 1));
+}
+```
+
+## string **properties**
+
+ok some nuances??
+- again values are immutable and can only be reassigned
+- **cannot add** new props into native data type
+- some methods you know
+  - `slice`, `indexOf`
+  - `trim`, `padStart`
+  - `split`, `join`, `repeat`
+
+simple
+
+## REST / SPREAD
+
+oh finally so I understand that for `...`
+- js function can accept any number of args with the help of the `rest` operator in the parameters area
+- this will bound all remaining values into an `array` parameter.
+  - any other params before that are not addded
+
+OK so when the operator is used **AS** a parameter,
+- it **spreads** out arrays or object props into the function call
+
+## `Math` object
+
+oh this is talking about the `Math` object used to do "adv" mathematical operations
+- what special is it provides a `namespace` for these methods. and as the methods contain simple english
+- this safely seperate the binding names from your own bindings
+
+
+
+
+
+
+
+
+
+
+
+
+

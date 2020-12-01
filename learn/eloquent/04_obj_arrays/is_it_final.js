@@ -54,9 +54,20 @@ const journalEvents = (J) => {
 // === main ===
 let x = 0;
 for(let ev of journalEvents(JOURNAL)) {
-    console.log(x++, ev, "thing: :", phi(makeTable(ev, JOURNAL)));
+    let corroletion = phi(makeTable(ev, JOURNAL));
 
+    // filter out too small values
+    if (corroletion > 0.1 || corroletion < -0.1) {
+        console.log(ev, corroletion);
+    }
 }
-// console.log(makeTable("pizza", JOURNAL))
-// console.log(typeof JOURNAL)
 
+// ---------------------------------------------
+console.log("\nThi is a thing");
+// combination of activities
+for (let entry of JOURNAL) {
+    if (entry.events.includes("peanuts") && !entry.events.includes("brushed teeth")) {
+        entry.events.push("peanut teeth");
+    }
+}
+console.log(phi(makeTable("peanut teeth", JOURNAL)));
