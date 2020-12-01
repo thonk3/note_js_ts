@@ -274,7 +274,14 @@ you prety much know what this is but heres some related functions
 - `JSON.stringify` convert json to string
 - `JSON.parse` convert string to json
 
+---
 
+## Exercises
+
+- [sum of a range](./range_sum.js)
+- [reverse array](./reverse_arr.js)
+- [linked list?](./linked.js)
+- [deep comparison](./how_deep.js)
 
 
 
