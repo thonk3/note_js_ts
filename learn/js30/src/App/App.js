@@ -15,6 +15,7 @@ const App = props => {
           <Route exact path='/' component={Routes.Home} />
 
           {/* 30 days things */}
+          <Route path='/d01_drumkit' component={Routes.Day1} />
 
 
           {/* misc */}
