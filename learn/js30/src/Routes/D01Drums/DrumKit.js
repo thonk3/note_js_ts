@@ -1,57 +1,70 @@
 import React from 'react'
 import './style.css'
 
-const DrumKit = () => {
+import clap from './sounds/clap.wav'
+import hihat from './sounds/hihat.wav'
+import kick from './sounds/kick.wav'
+import openhat from './sounds/openhat.wav'
+import boom from './sounds/boom.wav'
+import ride from './sounds/ride.wav'
+import snare from './sounds/snare.wav'
+import tom from './sounds/tom.wav'
+import tink from './sounds/tink.wav'
 
+const DrumKit = () => {
     const noteList = [
-        { dataKey: '65', keyMap: 'A', text: 'clap' },
-        { dataKey: '83', keyMap: 'S', text: 'hihat' },
-        { dataKey: '68', keyMap: 'D', text: 'kick' },
-        { dataKey: '70', keyMap: 'F', text: 'openhat' },
-        { dataKey: '71', keyMap: 'G', text: 'boom' },
-        { dataKey: '72', keyMap: 'H', text: 'ride' },
-        { dataKey: '74', keyMap: 'J', text: 'snare' },
-        { dataKey: '75', keyMap: 'K', text: 'tom' },
-        { dataKey: '76', keyMap: 'L', text: 'tink' },
+        { sound: clap, dataKey: '65', keyMap: 'A', text: 'clap' },
+        { sound: hihat, dataKey: '68', keyMap: 'D', text: 'kick' },
+        { sound: kick, dataKey: '83', keyMap: 'S', text: 'hihat' },
+        { sound: openhat, dataKey: '70', keyMap: 'F', text: 'openhat' },
+        { sound: boom, dataKey: '71', keyMap: 'G', text: 'boom' },
+        { sound: ride, dataKey: '72', keyMap: 'H', text: 'ride' },
+        { sound: snare, dataKey: '74', keyMap: 'J', text: 'snare' },
+        { sound: tom, dataKey: '75', keyMap: 'K', text: 'tom' },
+        { sound: tink, dataKey: '76', keyMap: 'L', text: 'tink' },
     ];
 
     const showKey = (e) => {
-        console.log(e);
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+
+        // console.log(key);
+        // console.log(audio);
+        if(!audio) return;
+        audio.currentTime = 0;
+        audio.play();
+        key.classList.add('playing')
+        
     }
 
-    // ok so this works?
-    window.addEventListener('keydown', function(e) {console.log(e)})
-
     const mapNotes = () =>
-        noteList.map(i => <Notes dataKey={i.dataKey} key={i.dataKey} keyMap={i.keyMap} text={i.text} />);
+        noteList.map(stuff => <Notes stuff={stuff} key={stuff.dataKey}  />);
 
     return (
-        <div className="d01-drums" onKeyDown={showKey}>
+        <div className="d01-drums" onKeyDown={showKey} tabIndex="0">
             BadumTsh
 
             <div className="keys">
                 {mapNotes()}
             </div>
-
-            <audio data-key="65" src="sounds/clap.wav"></audio>
-            <audio data-key="83" src="sounds/hihat.wav"></audio>
-            <audio data-key="68" src="sounds/kick.wav"></audio>
-            <audio data-key="70" src="sounds/openhat.wav"></audio>
-            <audio data-key="71" src="sounds/boom.wav"></audio>
-            <audio data-key="72" src="sounds/ride.wav"></audio>
-            <audio data-key="74" src="sounds/snare.wav"></audio>
-            <audio data-key="75" src="sounds/tom.wav"></audio>
-            <audio data-key="76" src="sounds/tink.wav"></audio>
         </div>
     )
 }
 
 const Notes = (props) => {
-    const { dataKey, keyMap, text } = props;
+    const { dataKey, keyMap, text, sound } = props.stuff;
+
+    // take away highlight
+    const endTransitioned = (e) => {
+        if(e.propertyName !== 'transform') return;
+        e.target.classList.remove('playing');
+    }
+
     return (
-        <div className="key" data-key={dataKey}>
+        <div className="key" data-key={dataKey} onTransitionEnd={endTransitioned}>
             <kbd>{keyMap}</kbd>
             <span className="sound">{text}</span>
+            <audio data-key={dataKey} src={sound} />
         </div>
     )
 }
