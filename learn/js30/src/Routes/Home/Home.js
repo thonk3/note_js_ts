@@ -5,7 +5,7 @@ import { List } from 'semantic-ui-react'
 
 const Home = props => {
     const dayLinks = [
-        { dest: '/d01_drumkit', text: "Day 01 - Drum Kits"}, 
+        { dest: '/d01', text: "Day 01 - Drum Kits"}, 
     ]
 
     const mapLinks = () => {
