@@ -26,4 +26,12 @@ day 2
 - finding criminals challange
 
 day 3
-- 
+- matching string from the start with `^`
+  - outside of `[]` will match strings at the start
+  - inside `[]` means dont match
+- matching string from the end with `$`
+- global tag `\w`, matching `[a-zA-Z0-9_]`
+- the opposite, matching non-alphanumeric chars `\W`
+- matching digits with `\d`
+- matching non numbers `\D`
+- this is terrible
