@@ -18,3 +18,12 @@ day 1
 
 day 2
 - exclude matching using `[^match]`
+- match char one or more time `+`
+- match char 0 or more time `*`
+- lazy matching, will match the shortest possible part that satisfy the rules.
+  - regex is greedy by default
+  - use `?` to change character to do lazy matching
+- finding criminals challange
+
+day 3
+- 
