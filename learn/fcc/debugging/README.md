@@ -23,3 +23,6 @@ day 2
 - wrong arguements order
 
 day 3
+- index number error
+- re init variables in a loop
+- breaking infinite loops
