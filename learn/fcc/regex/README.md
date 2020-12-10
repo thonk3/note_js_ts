@@ -35,3 +35,20 @@ day 3
 - matching digits with `\d`
 - matching non numbers `\D`
 - this is terrible
+
+day 4
+- maching whitespace `\s`
+- match non whitespace chars `\S`
+- specify number of matches `{min, max}`
+- min/max matches
+- check 0 or one `?`
+- pos/neg lookahead
+  - look ahead of string and look for pattern
+  - aight tf is this
+- grouping with `()`
+- reusing pattern using numbers to mark capture groups
+- use capture group to replace with `replace`
+- trim
+
+
+> ok this nightmare is over
