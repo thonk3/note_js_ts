@@ -23,4 +23,8 @@ day 2
 
 day 3
  
-day 4
+- bracket notation
+- remove properties with `delete`
+- check properties
+- iterate using `for ... in ...`
+- modify arrays in stored object
