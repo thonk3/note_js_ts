@@ -7,20 +7,37 @@ class Test {
         this.count  = 1;
     }
 
-    assert(test, answer) {
-        let res = test === answer;
+    result(res,test,ans) {
         console.log(`test #${this.count++} - ${res? "passed" : "failed"}`)
         
         if (res) return true;
         else {
-            console.log(`> expected(${typeof answer}): ${answer}`);
+            console.log(`> expected(${typeof answer}): ${ans}`);
             console.log(`> received(${typeof test}): ${test}`);
             return false;
         }
     }
 
+    assert(test, answer) {
+        let res = test === answer;
+        return this.result(res,test,answer);
+    }
+
+    assertArr(test, answer) {
+        let res = answer.every(item => test.includes(item));
+        return this.result(res,test,answer);
+    }
+
+    assertArrAll(arr, action) {
+        arr.every(e => this.assertArr(action(e.inp), e.res));
+    }
+
     assertAll(arr, action) {
         arr.every(e => this.assert(action(e.inp), e.res));
+    }
+
+    assertAllMulti(arr, action) {
+        arr.every(e => this.assert(action(...e.inp), e.res));
     }
 }
 

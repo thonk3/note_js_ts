@@ -1,9 +1,8 @@
 const Test = require('./test')
 
 // ----------------------------------------------
-const fun = input => {
-
-    return input;
+const c2f = input => {
+    return input*9/5 + 32;
 }
 
 // ----------------------------------------------
@@ -17,4 +16,4 @@ const testCases = [
 ]
 
 // run test
-Test.assertAll(testCases, fun);
+Test.assertAll(testCases, c2f);
