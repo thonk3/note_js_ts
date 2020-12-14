@@ -9,14 +9,18 @@ class Test {
 
     assert(test, answer) {
         let res = test === answer;
-        console.log(`\ntest #${this.count} - ${res? "passed" : "failed"}`)
+        console.log(`test #${this.count++} - ${res? "passed" : "failed"}`)
         
         if (res) return true;
         else {
-            console.log(`expected: ${answer}`);
-            console.log(`received: ${test}`);
+            console.log(`> expected(${typeof answer}): ${answer}`);
+            console.log(`> received(${typeof test}): ${test}`);
             return false;
         }
+    }
+
+    assertAll(arr, action) {
+        arr.every(e => this.assert(action(e.inp), e.res));
     }
 }
 
