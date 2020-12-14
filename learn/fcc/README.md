@@ -4,9 +4,9 @@ working through the js dsa cert, suppositely following along **code.sydney** js 
 
 - [basicjs](./basicjs/README.md)
 - [es6](./es6/README.md)
-- [regex](./debugging/README.md)
-- [basic debug]()
-- [basic data structure]()
+- [regex](./regex/README.md)
+- [basic debug](./basic_ds/README.md)
+- [basic data structure](./basic_algo_scripting/README.md)
 - [oop]()
 - [functional prog]()
 - [intermediet algo scripting]()
