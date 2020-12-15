@@ -4,6 +4,11 @@ alright this seems alike a bunch of simple exercises.
 I'll save the code and the test cases and run them locally using
 my own testing methods
 
+> aight first time writing a [testing thing](./test.js) is trash but somewhat works 
+> (exept for some later questions tho)
+> 
+> [template to add your code](./template.js)
+
 - [Convert Celsius to Fahrenheit](./c2f.js)
 - [Reverse a String](./reverse.js)
 - [Factorialize a Number](./fac.js)
@@ -18,5 +23,5 @@ my own testing methods
 - [Slice and Splice](./splice.js)
 - [Falsy Bouncer](./false.js)
 - [Where do I Belong](./where.js)
-- [Mutations]()
-- [Chunky Monkey]()
+- [Mutations](./mut.js)
+- [Chunky Monkey](./chunky.js)
