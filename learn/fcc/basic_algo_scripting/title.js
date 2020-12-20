@@ -2,15 +2,13 @@ const Test = require('./test')
 
 // ----------------------------------------------
 const fun = str => {
-    let arr = str.toLowerCase().split(" ")
+    return str.toLowerCase().split(" ")
         .map(word => {
             let wArr = word.split("");
             wArr[0] = wArr[0].toUpperCase();
             return wArr.join("")
         }
-    )
-    
-    return arr.join(" ");
+    ).join(" ");
 }
 
 // ----------------------------------------------
