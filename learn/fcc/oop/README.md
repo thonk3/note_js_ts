@@ -19,3 +19,38 @@ day 2
 - understand own properties
 - use prototype props to reduce duplicate code
 - iterate over all props
+
+day 3
+- constructor prop
+- change prototype to new object
+- rememeber to set constructor prop when changing prototype
+- where the property of the object comes from
+- understanding prototype chain
+  - similar to `hasOwnProperty`
+  - using `isPrototypeOf` to check what the object is an instance of
+
+day 4
+- use inheritance for DRY (cant really see inheritance here)
+- inheriting properties from supertype (follow up from above)
+  - doesnt seem like inheritance but just creating an object.
+- set child prototype to instance of parent
+  - using the method previous this is actually making a class function inheriting from a parent class
+  ```js
+  function Parent() {}
+  Parent.prototype = {
+    constructor: Parent,
+    talk: () => console.log("Hello world"),
+  }
+
+  // ---------------
+  function Child() {}
+  Child.prototype = Object.create(Parent.prototype);
+  let childObj = new Child();
+  ```
+- reset inherited constructor prop
+  - Child classes will also inherit the constructor of parent
+  - this needs to be reassigned
+- adding methods after inheritance
+
+day 5
+- 
