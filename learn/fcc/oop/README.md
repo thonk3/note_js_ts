@@ -53,4 +53,19 @@ day 4
 - adding methods after inheritance
 
 day 5
-- 
+- overiding inherited method, simple just reassign the method
+- using `mixin` to add common behavior between unrelated msg
+- private variables, define the variables using `let` and access it with getters and setters
+- what is Immediately Invoked Function Expression (IIFE)
+- using IIFE to create a module
+
+
+
+
+
+
+
+
+
+
+
