@@ -31,4 +31,18 @@ day 2
 - removing elements with `slice` try not to use `splice`
 
 day3
+- combine arrays with `concat`
+- add elements with `concat` instead of `push`
+- use `reduce`
+- use `sort`
+- dont mutate original arrays
+  - arrays are passed by referece unless you use `slice`
+
+day4
+- string into array with `split`
+- combine array with `join`
+- converting string to slugs
+- use `every`
+- use `some`
+- "currying"
 
