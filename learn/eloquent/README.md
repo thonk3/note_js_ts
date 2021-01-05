@@ -13,7 +13,7 @@ language
 3. [Functions](./03_func/notes.md)
 4. [Data Structures: Objects and Arrays](./04_obj_arrays/notes.md)
 5. [Higher-order Functions](./05_high_order_func/note.md)
-6. [The Secret Life of Objects]()
+6. [The Secret Life of Objects](./06_objects/note.md)
 7. [Project: A Robot]()
 8. [Bugs and Errors]()
 9. [Regular Expressions]()
