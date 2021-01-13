@@ -7,14 +7,14 @@
 
 > coppied stuff from basic algo, let see if it works
 
-- [Sum All Numbers in a Range]()
-- [Diff Two Arrays]()
-- [Seek and Destroy]()
-- [Wherefore art thou]()
-- [Spinal Tap Case]()
-- [Pig Latin]()
-- [Search and Replace]()
-- [DNA Pairing]()
+- [Sum All Numbers in a Range](./range_sum.js)
+- [Diff Two Arrays](./array_diff.js)
+- [Seek and Destroy](./seekdestroy.js)
+- [Wherefore art thou](./where_art.js)
+- [Spinal Tap Case](./where_art.js)
+- [Pig Latin](./pig_latin.js)
+- [Search and Replace](./find_replace.js)
+- [DNA Pairing](./dna_pairing.js)
 - [Missing letters]()
 - [Sorted Union]()
 - [Convert HTML Entities]()
