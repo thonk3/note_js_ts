@@ -62,6 +62,11 @@ function greaterThan(n) {
     return m => m > n;
 }
 
+// these are the same
+let gt = greaterThan(10)(11);
+console.log(gt);
+// true
+
 let greaterThan10 = greaterThan(10);
 console.log(greaterThan10(11));
 // true;
